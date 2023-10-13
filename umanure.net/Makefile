@@ -4,4 +4,4 @@ DRYRUN ?= --dry-run
 upload:
 	rsync -avuz $(DRYRUN) $(DELETE) \
 	 --exclude=Makefile \
-	 . root@$(SERVER):$(DOCROOT)
+	 . $(SERVER):$(DOCROOT)
